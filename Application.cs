@@ -8,9 +8,10 @@
             string[] items = {  "1. Input int number if is greater than 7, then print \"Hello\"",
                                 "2. Input string if name matches Vyacheslav, then display \"Hi, Vyacheslav\", else \"No such name\"",
                                 "3. Input int array with the custom size, if element of arr is divide by 3 print his index and value",
+                                "4. Is this sequence [( ( ( ) ) () ( ( ) ) ]] correct?",
                                 "Exit" };
 
-            method[] methods = new method[] { Method1, Method2, Method3, Exit };
+            method[] methods = new method[] { Method1, Method2, Method3, Method4, Exit };
             ConsoleMenu menu = new ConsoleMenu(items);
             
             int menuResult;
@@ -63,6 +64,21 @@
             else
             {
                 Console.WriteLine("Incorect input");
+            }
+        }
+
+        static void Method4()
+        {
+            InputLogic inputLogic = new InputLogic();
+            char[] sequence = inputLogic.InputSubsequence();
+
+            if (sequence.Length != 0)
+            {
+                _ = new Algorithms(sequence);
+            }
+            else
+            {
+                Console.WriteLine("Sequence empty");
             }
         }
         static void Exit()

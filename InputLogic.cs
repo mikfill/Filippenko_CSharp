@@ -104,5 +104,16 @@ namespace Filippenko_CSharp_AQA_TEST_Trainee_
             }
             return Array.Empty<int>();
         }
+
+        public char[] InputSubsequence()
+        {
+            //input
+            char[] givenSubsequence = { '[','(','(','(',')',')','(',')','(','(',')',')',']',']' };
+            //correct1
+            //char[] givenSubsequence = { '[','[','(','(','(',')',')','(',')','(','(',')',')',')',']',']' };
+            //correct2
+            //char[] givenSubsequence = { '[', '(', '(', '(', ')', ')', '(', ')', '(', '(', ')', ')', ')', ']' };
+            return givenSubsequence;
+        }
     }
 }

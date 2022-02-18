@@ -5,6 +5,7 @@
         private int? _num;
         private string? _name;
         private Array? _array;
+        private char[]? _subsequence;
 
         public Algorithms(int num)
         {
@@ -36,6 +37,20 @@
             else
             {
                 Console.WriteLine("Array is empty!");
+            }
+        }
+
+        public Algorithms(char[] subsequence)
+        {
+            _subsequence = subsequence;
+
+            if (_subsequence.Length != 0)
+            {
+                withSubsequence();
+            }
+            else
+            {
+                Console.WriteLine("Subsequence empty");
             }
         }
 
@@ -83,6 +98,48 @@
                         Console.WriteLine($"Element # [{ctr,3}] Value =>{enumeratorForFind.Current,3}");
                     }
                 }
+            }
+        }
+
+        private void withSubsequence()
+        {
+            Console.WriteLine(IscorrectSubsequence()); 
+
+            bool IscorrectSubsequence()
+            {
+                int balance = 0;
+                int roundBrackets = 0;
+                int squareBrackets = 0;
+                for (int i = 0; i < _subsequence.Length; i++)
+                {
+                    if (_subsequence[i] == '(')
+                    {
+                        balance++;
+                        roundBrackets++;
+                    }
+                    else if (_subsequence[i] == '[')
+                    {
+                        balance++;
+                        squareBrackets++;
+                    }
+                    else if (_subsequence[i] == ')')
+                    {
+                        balance--;
+                        roundBrackets--;
+                    }
+                    else if (_subsequence[i] == ']')
+                    {
+                        balance--;
+                        squareBrackets--;
+                    }
+                    if (balance < 0)
+                        return false;
+                }
+                if (roundBrackets % 2 != 0 || squareBrackets % 2 != 0)
+                {
+                    return false;
+                }
+                return (balance == 0);
             }
         }
     }
