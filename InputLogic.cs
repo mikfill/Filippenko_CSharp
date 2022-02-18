@@ -36,7 +36,6 @@ namespace Filippenko_CSharp_AQA_TEST_Trainee_
             {
                 return String.Empty;
             }
-
         }
         public Array inputArray()
         {
