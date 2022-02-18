@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Filippenko_CSharp_AQA_TEST_Trainee_
+﻿namespace Filippenko_CSharp_AQA_TEST_Trainee_
 {
     static class Program
     {

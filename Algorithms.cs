@@ -2,9 +2,10 @@
 {
     public class Algorithms
     {
-        private int _num;
-        private string _name;
-        private Array _array;
+        private int? _num;
+        private string? _name;
+        private Array? _array;
+
         public Algorithms(int num)
         {
             _num = num;
@@ -51,13 +52,13 @@
             string _correctNameEng = "Vyacheslav";
             string _correctNameRus = "Вячеслав";
 
-            if (_name == _correctNameEng)
+            if (_name.ToLower() == _correctNameEng.ToLower())
             {
-                Console.WriteLine($"Hi, {_name}");
+                Console.WriteLine($"Hi, {_correctNameEng}");
             }
-            else if (_name == _correctNameRus)
+            else if (_name.ToLower() == _correctNameRus.ToLower())
             {
-                Console.WriteLine($"Привет, {_name}");
+                Console.WriteLine($"Привет, {_correctNameRus}");
             }
             else
             {

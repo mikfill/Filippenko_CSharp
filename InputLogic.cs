@@ -4,7 +4,7 @@ namespace Filippenko_CSharp_AQA_TEST_Trainee_
 {
     class InputLogic
     {
-        public int inputNumber()
+        public int InputNumber()
         {
             int inputNumber = 0;
             Console.Write("Input number: ");
@@ -18,7 +18,7 @@ namespace Filippenko_CSharp_AQA_TEST_Trainee_
                 return inputNumber;
             }
         }
-        public string inputName()
+        public string InputName()
         {
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             var enc1251 = Encoding.GetEncoding(1251);
@@ -37,7 +37,7 @@ namespace Filippenko_CSharp_AQA_TEST_Trainee_
                 return String.Empty;
             }
         }
-        public Array inputArray()
+        public Array InputArray()
         {
             int _size = 0;
             int _methodOfArrayInitialization;

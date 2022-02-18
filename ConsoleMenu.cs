@@ -17,6 +17,7 @@
                 Console.Clear();
                 Console.WriteLine("QA Auto Test task(Trainee) Filippenko.M");
                 Console.WriteLine("Choose which algorithm you need select by ↑ or ↓ \n");
+
                 for (int i = 0; i < _menuItems.Length; i++)
                 {
                     if (counter == i)

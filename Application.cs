@@ -6,8 +6,8 @@
         public void ShowMenu()
         {
             string[] items = {  "1. Input int number if is greater than 7, then print \"Hello\"",
-                                "2. Input string if name matches Vyacheslav, then display “Hi, Vyacheslav”, else \"No such name\"",
-                                "3. Input int array with the custom size, if element of arr is divide by 3 print his value and index",
+                                "2. Input string if name matches Vyacheslav, then display \"Hi, Vyacheslav\", else \"No such name\"",
+                                "3. Input int array with the custom size, if element of arr is divide by 3 print his index and value",
                                 "Exit" };
 
             method[] methods = new method[] { Method1, Method2, Method3, Exit };
@@ -26,7 +26,7 @@
         static void Method1()
         {
             InputLogic inputLogic = new InputLogic();
-            int number = inputLogic.inputNumber();
+            int number = inputLogic.InputNumber();
 
             if (number != 0)
             {
@@ -40,7 +40,7 @@
         static void Method2()
         {
             InputLogic inputLogic = new InputLogic();
-            string name = inputLogic.inputName();
+            string name = inputLogic.InputName();
 
             if (!string.IsNullOrEmpty(name))
             {
@@ -54,7 +54,7 @@
         static void Method3()
         {
             InputLogic inputLogic = new InputLogic();
-            Array array = inputLogic.inputArray();
+            Array array = inputLogic.InputArray();
 
             if (array.Length != 0)
             {
